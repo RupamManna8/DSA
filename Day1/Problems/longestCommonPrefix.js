@@ -9,6 +9,7 @@ const longestCommonPrefix = (strs) =>{
                 continue
             }
             isExist = false
+            break
             
         }
         if(isExist === true){
@@ -22,4 +23,4 @@ const longestCommonPrefix = (strs) =>{
 };
 
 
-console.log(longestCommonPrefix(["dog","racecar","car"]))
+console.log(longestCommonPrefix(["aaa","aa","aaa"]))
