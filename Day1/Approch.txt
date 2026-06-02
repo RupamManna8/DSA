@@ -1,0 +1,20 @@
+Day 1 — Problems & Approaches
+
+1) Two Sum (TwoSum.js)
+- Question: Given an array of integers and a target, return the indices of the two numbers that add up to the target.
+- Approach:
+	- Brute force: check all pairs (O(n^2)).
+	- Two-pointer (on a sorted copy): sort a copy and use two pointers to find the pair, then map back to original indices (O(n log n) time, O(n) extra space).
+	- Hash map (preferred): one-pass map value -> index; for each number check if target - num exists in map (O(n) time, O(n) space).
+- Edge cases: duplicate values, negative numbers, no solution assumptions.
+
+2) Two Sum with Hashmap (TwoSumWithHashmap.js)
+- Question: Same as Two Sum — implementation using a hash map.
+- Approach: Iterate once, store seen numbers in a map with their index; when required complement is found return indices. Time O(n), space O(n).
+
+3) Longest Common Prefix (longestCommonPrefix.js)
+- Question: Given an array of strings, find the longest common prefix among them.
+- Approach:
+	- Vertical scanning: iterate characters of the first string and compare with same position in other strings; stop on mismatch (O(S) where S is total characters across strings).
+	- Alternatives: horizontal pairwise prefix reduction, binary search on prefix length.
+- Complexity: O(S) time, O(1) extra space.

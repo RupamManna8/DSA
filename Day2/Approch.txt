@@ -1,0 +1,9 @@
+Day 2 — Problems & Approaches
+
+1) Remove Duplicates from Sorted Array (RemoveDuplicate.js)
+- Question: Given a sorted array `nums`, remove the duplicates in-place such that each element appears only once and return the new length.
+- Approach: Use two pointers — `read` scans the array, `write` tracks position to write the next unique value. When nums[read] != nums[read-1], write it and increment `write`. Return `write` as new length. Time O(n), space O(1).
+
+2) Remove Element (RemoveElement.js)
+- Question: Given an array `nums` and a value `val`, remove all occurrences of `val` in-place and return the new length.
+- Approach: Use a write pointer that advances when encountering elements not equal to `val`. Overwrite in-place and return the write count. Time O(n), space O(1).
