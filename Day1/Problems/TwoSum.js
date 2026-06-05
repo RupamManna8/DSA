@@ -24,7 +24,7 @@ const tpTwoSum = (arr, target) => {
   while (last > first) {
     let sum = nums[first] + nums[last];
     if (sum == target) {
-      return [arr.indexOf(nums[first],first+1), arr.indexOf(nums[last])];
+      return [arr.indexOf(nums[first],), arr.indexOf(nums[last])];
     }
     if (sum < target) {
       first++;
