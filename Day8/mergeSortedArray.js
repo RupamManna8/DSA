@@ -7,6 +7,7 @@ var merge = function(nums1, m, nums2, n) {
                 nums1[i] = nums2[p2]
                 p2++
             }else{
+                
                 p1++
             }
             
