@@ -1,5 +1,5 @@
 var intToRoman = function (num) {
-  let map = new Map({
+  let map = {
     I: 1,
     V: 5,
     X: 10,
@@ -7,11 +7,10 @@ var intToRoman = function (num) {
     C: 100,
     D: 500,
     M: 1000,
-  });
+  };
   
   while(num != 0){
     let temp = Math.floor(num / 1000);
-    map.forEach()
     if(temp > 0){
        
     }
@@ -20,7 +19,7 @@ var intToRoman = function (num) {
 };
 
 // console.log(intToRoman("9845"));
-let map = new Map({
+ let map = {
     I: 1,
     V: 5,
     X: 10,
@@ -28,6 +27,6 @@ let map = new Map({
     C: 100,
     D: 500,
     M: 1000,
-  });
+  };
 
-  console.log(map)
+  console.log(map.for)

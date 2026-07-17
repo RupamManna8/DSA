@@ -15,7 +15,7 @@ var merge = function(nums1, m, nums2, n) {
       }
 
   }
-  console.log(index,idx1,idx2)
+
   while(idx1 >= 0 && index >= 0){
     nums1[index] = nums1[idx1]
     idx1--;
@@ -28,7 +28,6 @@ var merge = function(nums1, m, nums2, n) {
     idx2--;
   }
 
-  console.log(index,idx1,idx2)
   return nums1;
 };
 
