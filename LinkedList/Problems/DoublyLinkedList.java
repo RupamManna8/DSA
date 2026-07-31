@@ -51,16 +51,32 @@ public class DoublyLinkedList {
                 temp = temp.next;
                 count++;
             }
-            newNode.next = temp.next.next;
-            temp.next.prev = newNode;
-            temp.next = newNode;
-            newNode.prev = temp;
+            newNode.next = temp;
+            temp.prev.next = newNode;
+            newNode.prev = temp.prev; 
+
+        }
+
+        void createCircle(){
+            Node start = head;
+            Node temp = head;
+            while (temp.next!=null) {
+                temp = temp.next;
+            }
+            start.prev = temp;
+            temp.next = start;
         }
 
         Void Print() {
             Node temp = head;
+            int start = temp.val;
+            System.out.println(temp.val);
+            temp = temp.next;
             while (temp != null) {
                 System.out.println(temp.val);
+                if(temp.val == start){
+                    break;
+                }
                 temp = temp.next;
             }
             return null;
@@ -73,7 +89,8 @@ public class DoublyLinkedList {
         mylist.addNodeAtLast(45);
         mylist.addNodeAtLast(55);
         mylist.addNodeAtLast(65);
-        mylist.addNodeAtPos(90, 1);
+        // mylist.addNodeAtPos(90, 2);
+        mylist.createCircle();
         mylist.Print();
     }
 }
