@@ -15,25 +15,29 @@ public class RemoveNthEnd {
         while (countNode != null) {
             length = length + 1;
             countNode = countNode.next;
-        } 
-        while (pos != length - n - 1) {
+        }
+        while (pos != length - n - 1 && length - n - 1 >= 0) {
             temp = temp.next;
             pos++;
         }
-
-        temp.next = temp.next.next;
+        if (n == length) {
+            return head.next;
+        } else {
+            temp.next = temp.next.next;
+        }
 
         return head;
     }
+
     public static void main(String[] args) {
         AddToNumber obj = new AddToNumber();
         ListNode head = new ListNode();
         obj.addNode(head, 1);
         obj.addNode(head, 2);
-        obj.addNode(head, 3);
-        obj.addNode(head, 4);
-     
-        System.out.println(removeNthFromEnd(head, 2));
-        obj.Print(head);
+        // obj.addNode(head, 3);
+        // obj.addNode(head, 4);
+
+        removeNthFromEnd(head, 2);
+        obj.Print(head.next);
     }
 }
