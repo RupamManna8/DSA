@@ -10,6 +10,7 @@ public class RemoveElement {
 
         ListNode slow = dummy;
         ListNode fast = head;
+    
 
         while (fast != null) {
             if (fast.val == val) {
