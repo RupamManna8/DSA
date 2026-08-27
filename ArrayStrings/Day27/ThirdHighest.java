@@ -1,7 +1,6 @@
 package ArrayStrings.Day27;
 
 public class ThirdHighest {
-    class Solution {
     public int thirdMax(int[] nums) {
         Integer first = null;
         Integer second = null;
@@ -28,5 +27,5 @@ public class ThirdHighest {
 
         return third != null ? third : first;
     }
-}
+
 }
