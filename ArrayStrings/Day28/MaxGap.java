@@ -15,7 +15,7 @@ public class MaxGap {
         for (int i = 1; i < nums.length; i++) {
             maxGap = Math.max(nums[i] - nums[i - 1], maxGap);
         }
-
+        
         return maxGap;
     }
 }
