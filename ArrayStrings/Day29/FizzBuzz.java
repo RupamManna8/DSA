@@ -1,7 +1,9 @@
 package ArrayStrings.Day29;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class FizzBuzz {
     public List<String> fizzBuzz(int n) {
@@ -17,6 +19,13 @@ public class FizzBuzz {
                 myList.add("" + i);
             }
         }
+    
         return myList;
+    }
+    public static void main(String[] args) {
+        Set<Character> my = new HashSet<>();
+        my.add('a');
+        // my.remove('a');
+        System.out.println(my);
     }
 }
