@@ -20,4 +20,9 @@ public class FindMinInRotateArray {
         }
         return ans;
     }
+    public static void main(String[] args) {
+        String a = "ssdd";
+        String b = a.replace("" + a.charAt(2), "" + a.charAt(0));
+        System.out.println(b);
+    }
 }

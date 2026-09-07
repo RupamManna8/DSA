@@ -6,7 +6,7 @@ import java.util.Set;
 
 public class ListIntersection {
     public class ListNode {
-        int val;
+        public int val;
         ListNode next;
 
         ListNode(int x) {
