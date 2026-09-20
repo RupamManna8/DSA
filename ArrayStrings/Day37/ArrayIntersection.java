@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class ArrayIntersectio {
+public class ArrayIntersection {
     public int[] intersection(int[] num1, int[] num2) {
         Set<Integer> set = new HashSet<>();
         for (int i : num1) {
