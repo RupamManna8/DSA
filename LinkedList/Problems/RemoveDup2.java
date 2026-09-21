@@ -1,4 +1,7 @@
 package LinkedList.Problems;
+
+import LinkedList.Problems.AddToNumber.ListNode;
+
 /**
  * RemoveDup2
  */
