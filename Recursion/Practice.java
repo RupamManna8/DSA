@@ -1,5 +1,7 @@
 package Recursion;
 
+import java.util.ArrayList;
+
 public class Practice {
 
     //print array elements 
@@ -60,11 +62,36 @@ public class Practice {
             System.out.print(i + " ");
         }
     }
+
+    //array subsequence
+public static void SequenceHelper(
+            int arr[], int idx, ArrayList<Integer> current) {
+
+        // Base case: all elements have been considered
+        if (idx == arr.length) {
+            System.out.println(current);
+            return;
+        }
+
+        // Choice 1: Take the current element
+        current.add(arr[idx]);
+        System.out.println("operation");
+        SequenceHelper(arr, idx + 1, current);
+
+        // Backtrack: Undo the choice
+        current.remove(current.size() - 1);
+        System.out.println("remove state");
+        System.out.println(idx);
+
+
+        // Choice 2: Skip the current element
+       SequenceHelper(arr, idx + 1, current);
+    }
     public static void main(String[] args) {
-        int arr[] = {10,3,5,6,8,9};
+        int arr[] = {1,2,3};
         // PrintArray(arr);
         // System.out.println(SumArray(arr));
         // System.out.println(FindMax(arr));
-        PrintReverse(arr);
+        SequenceHelper(arr, 0, new ArrayList<>());
     }
 }
