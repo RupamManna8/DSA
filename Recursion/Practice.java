@@ -64,10 +64,9 @@ public class Practice {
     }
 
     //array subsequence
-public static void SequenceHelper(
-            int arr[], int idx, ArrayList<Integer> current) {
+    public static void SequenceHelper(
+        int arr[], int idx, ArrayList<Integer> current) {
 
-        // Base case: all elements have been considered
         if (idx == arr.length) {
             System.out.println(current);
             return;
