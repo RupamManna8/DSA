@@ -1,6 +1,9 @@
 package Recursion;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class Practice {
 
@@ -80,17 +83,29 @@ public class Practice {
         // Backtrack: Undo the choice
         current.remove(current.size() - 1);
         System.out.println("remove state");
-        System.out.println(idx);
+        System.out.println("Index : " + idx);
 
 
         // Choice 2: Skip the current element
        SequenceHelper(arr, idx + 1, current);
+    }
+
+    public static  void permutation(int arr[],int idx ){
+
+
+        for(int i = 0; i < arr.length;i++){
+            if(idx == i){
+                continue;
+            }
+
+        }
     }
     public static void main(String[] args) {
         int arr[] = {1,2,3};
         // PrintArray(arr);
         // System.out.println(SumArray(arr));
         // System.out.println(FindMax(arr));
+
         SequenceHelper(arr, 0, new ArrayList<>());
     }
 }
