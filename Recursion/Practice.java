@@ -105,7 +105,9 @@ public class Practice {
         // PrintArray(arr);
         // System.out.println(SumArray(arr));
         // System.out.println(FindMax(arr));
+        String a = "aa";
+        System.out.println(a.codePointAt(0) - 97);
 
-        SequenceHelper(arr, 0, new ArrayList<>());
+        // SequenceHelper(arr, 0, new ArrayList<>());
     }
 }
