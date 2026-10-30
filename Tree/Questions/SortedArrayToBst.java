@@ -3,7 +3,7 @@ package Tree.Questions;
 
 import Tree.TreeNode;
 
-public class SortedArrauToBst {
+public class SortedArrayToBst {
     public TreeNode buildTree(int nums[],int left,int right){
 
       
