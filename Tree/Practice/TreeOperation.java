@@ -34,8 +34,9 @@ public class TreeOperation {
         if (node == null) {
             return;
         }
-        System.out.print(node.val + " ");
+        
         inorder(node.left);
+        System.out.print(node.val + " ");
         inorder(node.right);
     }
 
@@ -44,20 +45,23 @@ public class TreeOperation {
             return;
         }
         if (node.val > val) {
+            if(node.left == null){
+                node.left = new TreeNode(val);
+                return;
+            }
             addNodeBst(node.left, val);
         } else {
+            if(node.right == null){
+               node.right = new TreeNode(val);
+               return;
+            }
             addNodeBst(node.right, val);
         }
-        
-        if (node.val > val) {
-            node.left = new TreeNode(val);
-        } else {
-            node.right = new TreeNode(val);
-        }
-        return;
     }
 
-    public void buildBst(TreeNode node,int arr[]) {
+    public void buildBst(int arr[]) {
+        TreeNode node = new TreeNode(arr[0]);
+        this.Node = node;
         for (int ele : arr) {
             addNodeBst(node, ele);
         }
@@ -79,10 +83,8 @@ public class TreeOperation {
         // ob.addNode(3);
         // ob.addNode(5);
         // ob.printTree();
-        TreeNode bst = new TreeNode(0);
         int arr[] = {10,5,89,64,11,7,8,2,3,1};
-        ob.Node = bst;
-        ob.buildBst(bst, arr);
+        ob.buildBst(arr);
         ob.printTree();
     }
 }
